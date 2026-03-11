@@ -1,0 +1,6 @@
+<h2>Create Account</h2>
+
+<input type="email" id="signupEmail" placeholder="Email">
+<input type="password" id="signupPassword" placeholder="Password">
+
+<button onclick="signup()">Signup</button>
