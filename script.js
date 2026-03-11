@@ -1,3 +1,27 @@
+document.addEventListener("DOMContentLoaded", function(){
+
+let fileInput = document.getElementById("fileUpload");
+
+if(fileInput){
+fileInput.onchange = function(){
+
+let file = this.files[0];
+let reader = new FileReader();
+
+reader.onload = function(e){
+let preview = document.getElementById("preview");
+if(preview){
+preview.src = e.target.result;
+}
+}
+
+reader.readAsDataURL(file);
+
+}
+}
+
+});
+
 function login(){
 
 let email=document.getElementById("email").value;
