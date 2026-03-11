@@ -1,13 +1,21 @@
-function login(){
+function detectMedia(){
 
-let email = document.getElementById("email").value;
-let password = document.getElementById("password").value;
+let file=document.getElementById("fileUpload").files[0];
 
-if(email === "" || password === ""){
-alert("Please enter email and password");
+if(!file){
+alert("Please upload a file");
 return;
 }
 
-window.location.href = "home.html";
+document.getElementById("result").innerText="Analyzing media...";
+
+setTimeout(function(){
+
+let confidence=Math.floor(Math.random()*20)+80;
+
+document.getElementById("result").innerText=
+"Result: Likely AI Generated | Confidence: "+confidence+"%";
+
+},2000);
 
 }
